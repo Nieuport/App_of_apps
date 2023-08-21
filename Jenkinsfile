@@ -5,4 +5,12 @@ pipeline {
     tools {
         terraform 'Terraform'
     }
+
+    stages {
+        stage('Get Code') {
+            steps {
+                checkout scm
+            }
+        }  
+    }
 }
